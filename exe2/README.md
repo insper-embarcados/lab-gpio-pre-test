@@ -19,16 +19,14 @@ gpio_get(PIN)
 
 ## Tarefa
 
-| Diagrama         |                                                             |
-|------------------|-------------------------------------------------------------|
-| ![](diagram.png|width=10) | [Open in wokwi](Link) |
-
-[Link]: https://wokwi.com/projects/382387982947858433
-[Open in wokwi]: https://img.shields.io/badge/Title-37a779?style=for-the-badge
+Modifique o código `main.c` para fazer leitura do sensor de movimento [pir](https://docs.wokwi.com/pt-BR/parts/wokwi-pir-motion-sensor) e acionar o LED sempre que o sensor detectar um movimento (`d=1`), quando não existir mais movimento (`d=0`) o LED deve ser desligado. 
 
 > Indicamos para vocês testarem primeiro online no wokwi e depois validam no CI.
 
-Modifique o código `main.c` para fazer leitura do sensor de movimento [pir](https://docs.wokwi.com/pt-BR/parts/wokwi-pir-motion-sensor) e acionar o LED sempre que o sensor detectar um movimento (`d=1`), quando não existir mais movimento (`d=0`) o LED deve ser desligado. 
+| Diagrama         |  ![](https://docs.wokwi.com/pt-BR/img/logo.svg)                                                           |
+|------------------|-------------------------------------------------------------|
+| ![](diagram.png) | [Open in in wokwi](https://wokwi.com/projects/382387982947858433) |
+
 
 ### Cenário de teste
 
