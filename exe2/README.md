@@ -19,9 +19,12 @@ gpio_get(PIN)
 
 ## Tarefa
 
-| Diagrama         | Wokwi Link                                                  |
+| Diagrama         |                                                             |
 |------------------|-------------------------------------------------------------|
-| ![](diagram.png) | [Wokwi link](https://wokwi.com/projects/382393810280337409) |
+| ![](diagram.png|width=10) | [Open in wokwi](Link) |
+
+[Link]: https://wokwi.com/projects/382387982947858433
+[Open in wokwi]: https://img.shields.io/badge/Title-37a779?style=for-the-badge
 
 > Indicamos para vocês testarem primeiro online no wokwi e depois validam no CI.
 
