@@ -15,7 +15,7 @@
         "id": "btn1",
         "top": 83,
         "left": 105.6,
-        "attrs": { "color": "green", "bounce": "1" }
+        "attrs": { "color": "green", "bounce": "0" }
       },
       { "type": "wokwi-gnd", "id": "gnd1", "top": 134.4, "left": 181.8, "attrs": {} }
     ],
