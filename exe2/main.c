@@ -1,7 +1,6 @@
 #include "pico/stdlib.h"
 #include <stdio.h>
 
-const uint MOTION_PIN = 28;
 const uint LED_PIN = 3;
 
 int main() {
@@ -10,13 +9,10 @@ int main() {
   gpio_init(LED_PIN);
   gpio_set_dir(LED_PIN, GPIO_OUT);
 
-  gpio_init(MOTION_PIN);
-  gpio_set_dir(MOTION_PIN, GPIO_IN);
-
-  printf("init\n");
+  // configurar pino como entrada
 
   while (true) {
-    if (gpio_get(MOTION_PIN))
-      printf("ok\n");
+    // ler o sensor
+    // e acionar o led de acordo
   }
 }

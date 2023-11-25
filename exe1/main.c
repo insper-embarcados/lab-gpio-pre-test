@@ -1,21 +1,21 @@
+#include "pico/cyw43_arch.h"
 #include "pico/stdlib.h"
 #include <stdio.h>
 
-const uint LED_PIN = 2;
-
 int main() {
   stdio_init_all();
-  gpio_init(LED_PIN);
-  gpio_set_dir(LED_PIN, GPIO_OUT);
+
+  // codigo init pin aqui
 
   while (true) {
-    printf("LED on\n");
-    gpio_put(LED_PIN, 1);
+    printf("LED on\n"); /* nao tirar  */
+    // codigo ativa pino aqui
+
     sleep_ms(250);
 
-    printf("LED off\n");
-    gpio_put(LED_PIN, 0);
+    printf("LED off\n"); /* nao tirar  */
+    // codigo desliga pino aqui
+
     sleep_ms(250);
   }
-  return 0;
 }
