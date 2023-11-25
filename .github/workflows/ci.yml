@@ -42,7 +42,7 @@ jobs:
           name: firmware
           path: build/exe4/exe4.*
 
-  test-on-wokwi:
+  test-exe-4:
     runs-on: ubuntu-latest
     needs: build
     steps:
@@ -52,10 +52,10 @@ jobs:
         with:
           name: firmware
           path: exe4/build
-      - name: Test Pi Pico SDK Blinky on Wokwi
+      - name: Test exe 4 deboucing
         uses: wokwi/wokwi-ci-action@v1
         with:
           token: ${{ secrets.WOKWI_CLI_TOKEN }}
           path: exe4/
           timeout: 1000 # ms
-          scenario: 'exe4-btn-debouncing.test.yaml'
+          scenario: 'test.yaml'
