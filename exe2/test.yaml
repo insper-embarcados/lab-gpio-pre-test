@@ -7,12 +7,12 @@ steps:
 
   - set-control:
       part-id: pir1
-      control: data-emotion
+      control: ??
       value: 1
   - delay: 100ms
   - set-control:
       part-id: pir1
-      control: data-emotion
+      control: ??
       value: 0
 
   - delay: 100ms
