@@ -2,13 +2,13 @@
 
 Botões são sistemas eletromecânicos e geram uma oscilação quando são pressionados, se a oscilação não for tratada a nível de hardware ou de software ela pode ser interpretada como se o usuário tivesse apertado o botão diversas vezes, quando na verdade apertou apenas uma!
 
-Veja o sinal a seguir e repare que o valor oscila antes de estabilizar no valor `0` (quando foi apertado) ou no valor `1` quando foi solto:
+Veja o sinal a seguir capturado de um botão senso apertado e repare que o valor oscila antes de estabilizar no valor `0` para quando foi apertado ou no valor `1` quando foi solto (que parece ainda pior!):
 
 ![](https://hackaday.com/wp-content/uploads/2015/11/debounce_bouncing.png)
 
 ## Tarefa
 
-![diagram.png]
+![](diagram.png)
 
 Modifique o código `main.c` para fazer a leitura do botão conectado ao pino `GP26` e ignorar a oscilação que irá ocorrer quando o botão for apertado.
 

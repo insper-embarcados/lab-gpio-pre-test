@@ -18,7 +18,7 @@ gpio_pull_up(PIN);
 
 ## Tarefa
 
-![diagram.png]
+![](diagram.png)
 
 Modifique o código `main.c` para fazer a leitura de quantas vezes o botão conectado ao pino `GP26` foi apertado. Agora além de configurar o pino como entrada. Lembre que vocè deverá ativar o resistor de `pullup` no pino ligado ao botão.
 
