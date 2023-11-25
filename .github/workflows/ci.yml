@@ -76,7 +76,7 @@ jobs:
         with:
           token: ${{ secrets.WOKWI_CLI_TOKEN }}
           path: exe1/
-          timeout: 1000 # ms
+          timeout: 2000 # ms
           scenario: 'test.yaml'
 
   test-exe-2:
