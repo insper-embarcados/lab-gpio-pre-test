@@ -1,6 +1,6 @@
 # Exercício 2
 
-Além de saídas difitais, microcontroladores possuem entradas digitais, onde podemos ler informações geradas pelo mundo externo (informações que podem ser tratadas como `0` ou `1`). 
+Além de saídas digitais, microcontroladores possuem entradas digitais, onde podemos ler informações geradas pelo mundo externo (informações que podem ser tratadas como `0` ou `1`). 
 
 ## Código
 
