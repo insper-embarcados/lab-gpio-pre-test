@@ -23,10 +23,9 @@ Modifique o código `main.c` para fazer leitura do sensor de movimento [pir](htt
 
 > Indicamos para vocês testarem primeiro online no wokwi e depois validam no CI.
 
-| Diagrama         |  ![](https://docs.wokwi.com/pt-BR/img/logo.svg)                                                           |
-|------------------|-------------------------------------------------------------|
+| Diagrama         | ![](https://docs.wokwi.com/pt-BR/img/logo.svg)                    |
+|------------------|-------------------------------------------------------------------|
 | ![](diagram.png) | [Open in in wokwi](https://wokwi.com/projects/382387982947858433) |
-
 
 ### Cenário de teste
 

@@ -8,13 +8,15 @@ Veja o sinal a seguir capturado de um botão senso apertado e repare que o valor
 
 ## Tarefa
 
-![](diagram.png)
-
 Modifique o código `main.c` para fazer a leitura do botão conectado ao pino `GP26` e ignorar a oscilação que irá ocorrer quando o botão for apertado.
+
+| Diagrama         | ![](https://docs.wokwi.com/pt-BR/img/logo.svg)                    |
+|------------------|-------------------------------------------------------------------|
+| ![](diagram.png) | [Open in in wokwi](https://wokwi.com/projects/382393931447496705) |
 
 ### Cenário de teste
 
-O teste pressiona uma úniva vez o botão, mas dessa vez o botão foi criado para possuir o `bouncing`.
+O teste pressiona uma única vez o botão, mas dessa vez o botão foi criado para possuir o `bouncing`.
 
 Resultado esperado:
 
