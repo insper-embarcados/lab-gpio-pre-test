@@ -4,23 +4,25 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-#include <stdio.h>
 #include "pico/stdlib.h"
+#include <stdio.h>
 
-const uint LED_PIN = 2;
+const uint BUTTON_PIN = 26;
 
-int main() 
-{
-    stdio_init_all();
-    gpio_init(LED_PIN);
-    gpio_set_dir(LED_PIN, GPIO_OUT);
-    while (true) {
-        gpio_put(LED_PIN, 1);
-        printf("LED on\n");
-        sleep_ms(250);
-        gpio_put(LED_PIN, 0);
-        //printf("LED off\n");
-        sleep_ms(250);
+int main() {
+  stdio_init_all();
+
+  gpio_init(BUTTON_PIN);
+  gpio_set_dir(BUTTON_PIN, GPIO_IN);
+  gpio_pull_up(BUTTON_PIN);
+
+  int i = 0;
+  printf("oi\n");
+  while (true) {
+    if (gpio_get(BUTTON_PIN) == 0) {
+      while (gpio_get(BUTTON_PIN) == 0) {
+      }
+      printf("Button pressed %d times \n", ++i);
     }
-    return 0;
+  }
 }

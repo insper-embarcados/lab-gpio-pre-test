@@ -1,15 +1,17 @@
-name: Blinky test
+name: Pushbutton counter test
 version: 1
 author: Uri Shaked
 
 steps:
-  - wait-serial: 'LED on'
-  - expect-pin:
-      part-id: led1
-      pin: A # Anode pin
+  - delay: 10ms
+  - set-control:
+      part-id: btn1
+      control: pressed
       value: 1
-  - wait-serial: 'LED off'
-  - expect-pin:
-      part-id: led1
-      pin: A # Anode pin
+  - delay: 100ms
+  - set-control:
+      part-id: btn1
+      control: pressed
       value: 0
+
+  - wait-serial: 'Button pressed 1 times'
