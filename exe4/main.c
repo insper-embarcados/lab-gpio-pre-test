@@ -17,9 +17,11 @@ int main() {
   gpio_pull_up(BUTTON_PIN);
 
   int i = 0;
-  printf("oi\n");
+
   while (true) {
     if (gpio_get(BUTTON_PIN) == 0) {
+      sleep_ms(200);
+
       while (gpio_get(BUTTON_PIN) == 0) {
       }
 
