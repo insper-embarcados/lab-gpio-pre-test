@@ -19,7 +19,7 @@ int main()
         printf("LED on\n");
         sleep_ms(250);
         gpio_put(LED_PIN, 0);
-        printf("LED off\n");
+        //printf("LED off\n");
         sleep_ms(250);
     }
     return 0;
