@@ -58,4 +58,4 @@ jobs:
           token: ${{ secrets.WOKWI_CLI_TOKEN }}
           path: /
           timeout: 1000 # ms
-          scenario: 'blink.test.yaml'
+          scenario: 'exe4-btn-debouncing.test.yaml'
