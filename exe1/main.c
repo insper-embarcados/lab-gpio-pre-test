@@ -17,6 +17,6 @@ int main() {
     printf("LED off\n"); /* nao tirar  */
     // codigo desliga pino aqui 
     gpio_put(2, 0);
-    sleep_ms(250);
+    sleep_ms(250); 
   }
 }
