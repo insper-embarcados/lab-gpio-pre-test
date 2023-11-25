@@ -36,11 +36,36 @@ jobs:
           cd build
           cmake ..
           make
-      - name: Upload firmware
+
+      - name: Upload firmware exe3
         uses: actions/upload-artifact@v3
         with:
-          name: firmware
+          name: firmware-exe3
+          path: build/exe3/exe3.*
+
+      - name: Upload firmware exe4
+        uses: actions/upload-artifact@v3
+        with:
+          name: firmware-exe4
           path: build/exe4/exe4.*
+
+  test-exe-3:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - uses: actions/checkout@v3
+      - name: Download firmware
+        uses: actions/download-artifact@v2
+        with:
+          name: firmware-exe3
+          path: exe3/build
+      - name: Test exe 3 deboucing
+        uses: wokwi/wokwi-ci-action@v1
+        with:
+          token: ${{ secrets.WOKWI_CLI_TOKEN }}
+          path: exe3/
+          timeout: 1000 # ms
+          scenario: 'test.yaml'
 
   test-exe-4:
     runs-on: ubuntu-latest
@@ -50,7 +75,7 @@ jobs:
       - name: Download firmware
         uses: actions/download-artifact@v2
         with:
-          name: firmware
+          name: firmware-exe4
           path: exe4/build
       - name: Test exe 4 deboucing
         uses: wokwi/wokwi-ci-action@v1
