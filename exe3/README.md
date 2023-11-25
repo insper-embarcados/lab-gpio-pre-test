@@ -8,15 +8,19 @@ Botões são componentes mecânicos que quando apertados conectam dois contatos 
 
 Botões para operarem corretamente precisam ser energizados (fornecendo um valor quando apertado e outro quando solto), para facilitar essa conexão fabricantes de microcontrolor disponibilizam nos pinos um recurso chamado de `resistor de pull-up`, que fornecem energia a um pino, mesmo quando ele é configurado como `input`.
 
+### Código
+
+Para ativar o pull-up em um pino, use:
+
+```c
+gpio_pull_up(PIN);
+```
+
 ## Tarefa
 
 ![diagram.png]
 
-Modifique o código `main.c` para fazer a leitura de quantas vezes o botão conectado ao pino `GP26` foi apertado. Agora além de configurar o pino como entrada, vocè deverá ativar o resistor de `pullup` nele usando a função:
-
-```c
-gpio_pull_up(BUTTON_PIN);
-```
+Modifique o código `main.c` para fazer a leitura de quantas vezes o botão conectado ao pino `GP26` foi apertado. Agora além de configurar o pino como entrada. Lembre que vocè deverá ativar o resistor de `pullup` no pino ligado ao botão.
 
 ### Cenário de teste
 

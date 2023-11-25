@@ -1,0 +1,19 @@
+name: Motion test
+author: Rafael Corsi
+version: 1
+
+steps:
+  - delay: 10ms
+
+  - set-control:
+      part-id: pir1
+      control: data-emotion
+      value: 1
+  - delay: 100ms
+  - set-control:
+      part-id: pir1
+      control: data-emotion
+      value: 0
+
+  - delay: 100ms
+

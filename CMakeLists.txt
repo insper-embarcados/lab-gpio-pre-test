@@ -28,5 +28,6 @@ if(CMAKE_C_COMPILER_ID STREQUAL "GNU")
 endif()
 
 # Hardware-specific examples in subdirectories:
+add_subdirectory(exe2)
 add_subdirectory(exe3)
 add_subdirectory(exe4)
