@@ -22,9 +22,9 @@ int main() {
     while (gpio_get(BUTTON_PIN) == 1) {
     }
 
-    printf("Button pressed %d times \n", ++btn_counter);
-
     while (gpio_get(BUTTON_PIN) == 0) {
     }
+
+    printf("Button pressed %d times \n", ++btn_counter);
   }
 }

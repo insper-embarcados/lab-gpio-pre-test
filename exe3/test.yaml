@@ -15,6 +15,7 @@ steps:
       control: pressed
       value: 0
 
+  - delay: 100ms
   - set-control:
       part-id: btn1
       control: pressed
