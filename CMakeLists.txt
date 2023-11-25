@@ -12,7 +12,7 @@ set(CMAKE_CXX_STANDARD 17)
 # Pull in Raspberry Pi Pico SDK (must be before project)
 include(pico_sdk_import.cmake)
 
-project(Blink C CXX ASM)
+project(Exe4 C CXX ASM)
 
 set(PICO_CXX_ENABLE_EXCEPTIONS 1)
 
@@ -21,18 +21,18 @@ pico_sdk_init()
 
 # Add executable. Default name is the project name, version 0.1
 
-add_executable(blink main.c)
+add_executable(exe4 main.c)
 
-pico_set_program_name(blink "Blink")
-pico_set_program_version(blink "0.1")
+pico_set_program_name(exe4 "Exe4")
+pico_set_program_version(exe4 "0.1")
 
-pico_enable_stdio_uart(blink 1)
-pico_enable_stdio_usb(blink 0)
+pico_enable_stdio_uart(exe4 1)
+pico_enable_stdio_usb(exe4 0)
 
 # Add the standard library to the build
-target_link_libraries(blink pico_stdlib)
+target_link_libraries(exe4 pico_stdlib)
 
 # Add any user requested libraries
-target_link_libraries(blink hardware_clocks)
+target_link_libraries(exe4 hardware_clocks)
 
-pico_add_extra_outputs(blink)
+pico_add_extra_outputs(exe4)

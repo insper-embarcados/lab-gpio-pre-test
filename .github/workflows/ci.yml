@@ -40,7 +40,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: firmware
-          path: build/blink.*
+          path: build/exe4.*
 
   test-on-wokwi:
     runs-on: ubuntu-latest
