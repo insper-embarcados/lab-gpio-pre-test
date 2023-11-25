@@ -3,8 +3,6 @@
 
 int main() {
   // codigo init pin aqui
-  gpio_init(PIN);
-  gpio_set_dir(PIN, GPIO_OUT);
   
   while (true) {
     printf("LED on\n"); /* nao tirar  */
