@@ -40,7 +40,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: firmware
-          path: build/exe4.*
+          path: build/exe4/exe4.*
 
   test-on-wokwi:
     runs-on: ubuntu-latest
@@ -56,6 +56,6 @@ jobs:
         uses: wokwi/wokwi-ci-action@v1
         with:
           token: ${{ secrets.WOKWI_CLI_TOKEN }}
-          path: /
+          path: exe4/
           timeout: 1000 # ms
           scenario: 'exe4-btn-debouncing.test.yaml'

@@ -1,38 +1,31 @@
-# Generated Cmake Pico project file
+cmake_minimum_required(VERSION 3.12)
 
-cmake_minimum_required(VERSION 3.13)
+# Pull in SDK (must be before project)
+include(pico_sdk_import.cmake)
 
+project(pico_examples C CXX ASM)
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_CXX_STANDARD 17)
 
-# initalize pico_sdk from installed location (note this can come from
-# environment, CMake cache etc) set(PICO_SDK_PATH
-# "/home/mathew/src/pico/pico-sdk")
+if(PICO_SDK_VERSION_STRING VERSION_LESS "1.3.0")
+  message(
+    FATAL_ERROR
+      "Raspberry Pi Pico SDK version 1.3.0 (or later) required. Your version is ${PICO_SDK_VERSION_STRING}"
+  )
+endif()
 
-# Pull in Raspberry Pi Pico SDK (must be before project)
+set(PICO_EXAMPLES_PATH ${PROJECT_SOURCE_DIR})
+pico_sdk_init()
 include(pico_sdk_import.cmake)
 
-project(Exe4 C CXX ASM)
+add_compile_options(
+  -Wall -Wno-format # int != int32_t as far as the compiler is concerned because
+                    # gcc has int32_t as long int
+  -Wno-unused-function # we have some for the docs that aren't called
+)
+if(CMAKE_C_COMPILER_ID STREQUAL "GNU")
+  add_compile_options(-Wno-maybe-uninitialized)
+endif()
 
-set(PICO_CXX_ENABLE_EXCEPTIONS 1)
-
-# Initialise the Raspberry Pi Pico SDK
-pico_sdk_init()
-
-# Add executable. Default name is the project name, version 0.1
-
-add_executable(exe4 main.c)
-
-pico_set_program_name(exe4 "Exe4")
-pico_set_program_version(exe4 "0.1")
-
-pico_enable_stdio_uart(exe4 1)
-pico_enable_stdio_usb(exe4 0)
-
-# Add the standard library to the build
-target_link_libraries(exe4 pico_stdlib)
-
-# Add any user requested libraries
-target_link_libraries(exe4 hardware_clocks)
-
-pico_add_extra_outputs(exe4)
+# Hardware-specific examples in subdirectories:
+add_subdirectory(exe4)
